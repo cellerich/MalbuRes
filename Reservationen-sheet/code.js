@@ -124,7 +124,7 @@ function doGet(e) {
   //check if submissionId is valid and set the FormState to delete and call onChange function
   
   // Iterate trough entries and find the correct submissionId 
-  var mySS = SpreadsheetApp.openById("1BcN7H70-6u4NAqPPzSayGLg_gzt9iyFBXN_Dyyw23Bs");
+  var mySS = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty("ssId"));
   SpreadsheetApp.setActiveSpreadsheet(mySS);
   var MySheet = mySS.getSheetByName("Submissions");
   SpreadsheetApp.setActiveSheet(MySheet);
