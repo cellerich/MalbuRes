@@ -6,11 +6,11 @@ Mit einem JotForm Formular welches seine Daten an ein Google Spreadsheet sendet 
 Der Prozess läuft als "onchange" Code im Google Spreadsheet und hat folgende Funtionen:
 - Überprüfen ob im besagtem Zeitraum bereits eine Buchung existiert
 - Wenn nicht:
--- Kalendereintrag in Google Kalender vornehmen 
--- Bestätigungsmail an Absender senden
--- ggf. Bestätigungsmail an Fluglehrer senden
+  - Kalendereintrag in Google Kalender vornehmen 
+  - Bestätigungsmail an Absender senden
+  - ggf. Bestätigungsmail an Fluglehrer senden
 - wenn ja:
--- Reservation per Mail zurückweisen
+  - Reservation per Mail zurückweisen
 
 Ein weiterer Prozess (Reservation löschen) kann durch einen Link im Bestätigungsmail angeworfen werden:
 - Kalender Eintrag löschen
