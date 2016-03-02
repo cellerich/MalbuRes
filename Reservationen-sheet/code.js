@@ -4,13 +4,17 @@ function onBookingChange(){
   var MySheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   Logger.log(MySheet.getLastRow());
   
-  for (var row = 2; row<=MySheet.getLastRow(); row++){
+  
+  for (var row = 2; row<=MySheet.getLastRow(); row++) {
+      
     var bd;
     var formState = MySheet.getRange(row, 12).getValue();
     var typ = MySheet.getRange(row, 8).getValue();
     
-    // select calendar from entry     
+    // select calendar from entry
+    
     var cn = "ReservationTest";    
+    
     switch(typ) {      
       case "Flugzeug Seneca III - HB-LQY":         
         cn = "Seneca III - HB-LQY";       
@@ -312,7 +316,7 @@ function getBookingDetails(RowNumber){
   var data = new Object();    
   
   for (var i=1; i<columns; i++){
-    data[myS.getRange(1, i).getValue()] = myS.getRange(RowNumber, i).getValue();
+    data[myS.getRange(1, i).getValue().toString()] = myS.getRange(RowNumber, i).getValue();
     }
   
   if(data.FormState != "Delete") {
@@ -361,7 +365,7 @@ function getFIdata(FIName){
   
   var data = new Object();
   for (var i=1; i<=myS.getLastColumn(); i++) {
-    data[myS.getRange(1,i).getValue()] = myS.getRange(row,i).getValue();
+    data[myS.getRange(1,i).getValue().toString()] = myS.getRange(row,i).getValue();
   }
   
   return data;
